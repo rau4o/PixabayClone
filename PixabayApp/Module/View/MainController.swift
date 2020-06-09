@@ -24,7 +24,7 @@ class MainController: UITabBarController {
         let searchVideoController = UINavigationController(rootViewController: SearchVideoController())
         
         searchPhotoController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-        searchVideoController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        searchVideoController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
         
         viewControllers = [searchPhotoController, searchVideoController]
     }

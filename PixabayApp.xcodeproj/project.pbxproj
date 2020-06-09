@@ -25,6 +25,7 @@
 		AE69AF57248E869500225FAB /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF56248E869500225FAB /* PhotoCollectionViewCell.swift */; };
 		AE69AF5A248E9B0C00225FAB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF59248E9B0C00225FAB /* MainController.swift */; };
 		AE69AF5D248E9E2C00225FAB /* SearchVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF5C248E9E2C00225FAB /* SearchVideoController.swift */; };
+		AE7596412490107E00B762E4 /* DetailPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7596402490107E00B762E4 /* DetailPhotoController.swift */; };
 		D51C6D1DDF5918BC861ECA06 /* Pods_PixabayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4297127BEF75CE01A6EBA5D9 /* Pods_PixabayApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		AE69AF56248E869500225FAB /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE69AF59248E9B0C00225FAB /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		AE69AF5C248E9E2C00225FAB /* SearchVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoController.swift; sourceTree = "<group>"; };
+		AE7596402490107E00B762E4 /* DetailPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoController.swift; sourceTree = "<group>"; };
 		D2617F37B5E503F8A78B43B9 /* Pods-PixabayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayApp.release.xcconfig"; path = "Target Support Files/Pods-PixabayApp/Pods-PixabayApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 		AE69AF45248E789C00225FAB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AE7596402490107E00B762E4 /* DetailPhotoController.swift */,
 				AE69AF59248E9B0C00225FAB /* MainController.swift */,
 				AE69AF5B248E9E0D00225FAB /* VideoPage */,
 				AE69AF58248E9A3000225FAB /* PhotoPage */,
@@ -321,6 +324,7 @@
 				AE69AF30248E782600225FAB /* AppDelegate.swift in Sources */,
 				AE69AF53248E7E1D00225FAB /* WebService.swift in Sources */,
 				AE152C84248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift in Sources */,
+				AE7596412490107E00B762E4 /* DetailPhotoController.swift in Sources */,
 				AE69AF5A248E9B0C00225FAB /* MainController.swift in Sources */,
 				AE152C82248F553200DC4E6D /* SearchVideoViewModel.swift in Sources */,
 				AE69AF4F248E7CEF00225FAB /* PhotoData.swift in Sources */,

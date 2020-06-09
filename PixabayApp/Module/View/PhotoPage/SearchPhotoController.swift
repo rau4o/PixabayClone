@@ -17,6 +17,7 @@ class SearchPhotoController: UIViewController {
     // MARK: - Properties
     
     var viewModel = SearchPhotoViewModel()
+    let detailController = DetailPhotoController()
     private let searchController = UISearchController(searchResultsController: nil)
     dynamic var changedSizeCell: CGFloat = 1
     
@@ -69,22 +70,6 @@ class SearchPhotoController: UIViewController {
             changedSizeCell = 3
             collectionView.reloadData()
         }
-//        switch sender.selectedSegmentIndex {
-//            case 1:
-//                changedSizeCell = 1
-//                collectionView.reloadData()
-//                print("1")
-//            case 2:
-//                changedSizeCell = 2
-//                collectionView.reloadData()
-//                print("2")
-//            case 3:
-//                changedSizeCell = 3
-//                collectionView.reloadData()
-//            default:
-//                break
-//        }
-//        collectionView.reloadData()
     }
 }
 
@@ -119,7 +104,7 @@ extension SearchPhotoController {
     private func setupNavigationBar(){
         navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Search"
+        title = "Search Photo"
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.backgroundColor = .white
     }
@@ -162,5 +147,16 @@ extension SearchPhotoController: UICollectionViewDelegateFlowLayout {
         let width = (view.frame.width / changedSizeCell ) - 16
         let heigth = (view.frame.width / changedSizeCell ) - 30
         return CGSize(width: width, height: heigth)
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension SearchPhotoController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let currentPhoto = viewModel.getElements(at: indexPath.item).imageURL
+        guard let currentImage = currentPhoto else { return }
+        navigationController?.pushViewController(detailController, animated: true)
+        detailController.mainImageView.kf.setImage(with: URL(string: currentImage))
     }
 }

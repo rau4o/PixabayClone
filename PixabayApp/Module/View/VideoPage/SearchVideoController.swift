@@ -66,7 +66,7 @@ extension SearchVideoController {
     private func setupNavigationBar(){
         navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Search"
+        title = "Search Video"
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.backgroundColor = .white
     }
@@ -85,7 +85,8 @@ extension SearchVideoController {
 extension SearchVideoController {
     
     func setVideo(url: String) {
-        let player = AVPlayer(url: URL(string: url)!)
+        guard let url = URL(string: url) else { return }
+        let player = AVPlayer(url: url)
         let vc = AVPlayerViewController()
         vc.player = player
 
@@ -130,7 +131,7 @@ extension SearchVideoController: UICollectionViewDelegateFlowLayout {
 
 extension SearchVideoController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentVideo = viewModel.getElements(at: indexPath.item).videos.large.url
+        let currentVideo = viewModel.getElements(at: indexPath.item).videos.small.url
         DispatchQueue.main.async {
             guard let currentVideo = currentVideo else { return }
             self.setVideo(url: currentVideo)

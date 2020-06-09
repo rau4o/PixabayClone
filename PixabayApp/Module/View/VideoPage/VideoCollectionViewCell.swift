@@ -14,7 +14,7 @@ class VideoCollectionViewCell: UICollectionViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         return label
     }()
     
@@ -28,7 +28,7 @@ class VideoCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         layoutUI()
-        backgroundColor = .red
+        backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     }
     
     required init?(coder: NSCoder) {
@@ -38,15 +38,26 @@ class VideoCollectionViewCell: UICollectionViewCell {
     // MARK: - Helper Functions
     
     private func layoutUI() {
-        addSubview(photoImageView)
+        [photoImageView, titleLabel].forEach {
+            addSubview($0)
+        }
         
         photoImageView.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
             make.bottom.equalToSuperview().inset(30)
         }
+        
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(photoImageView.snp.bottom)
+            make.left.bottom.right.equalToSuperview()
+        }
     }
     
     func configureCell(video: VideoHit) {
-        photoImageView.kf.setImage(with: URL(string: "https://i.vimeocdn.com/video/\(video.picture_id)_\("640x360").jpg"))
+        DispatchQueue.main.async {
+            self.photoImageView.kf.indicatorType = .activity
+            self.photoImageView.kf.setImage(with: URL(string: "https://i.vimeocdn.com/video/\(video.picture_id)_\("640x360").jpg"))
+            self.titleLabel.text = video.tags
+        }
     }
 }
