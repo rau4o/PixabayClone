@@ -45,7 +45,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         
         photoImageView.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-            make.bottom.equalToSuperview().inset(30)
+            make.bottom.equalToSuperview().inset(25)
         }
         
         titleLabel.snp.makeConstraints { (make) in
