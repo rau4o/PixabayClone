@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.1.0)
+  - AnchoredBottomSheet (0.3.0):
+    - SnapKit (~> 5.0)
+  - IQKeyboardManager (6.5.5)
+  - Kingfisher (5.13.4):
+    - Kingfisher/Core (= 5.13.4)
+  - Kingfisher/Core (5.13.4)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - AnchoredBottomSheet
+  - IQKeyboardManager
+  - Kingfisher
+  - Moya
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AnchoredBottomSheet
+    - IQKeyboardManager
+    - Kingfisher
+    - Moya
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  AnchoredBottomSheet: 847a5500df14f138ed0734223cd2faad98750ef8
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: eb95e80ca17f15972bf580aea7107dfb56b632a2
+
+COCOAPODS: 1.8.4

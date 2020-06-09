@@ -3,27 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE152C80248F513500DC4E6D /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C7F248F513500DC4E6D /* VideoData.swift */; };
+		AE152C82248F553200DC4E6D /* SearchVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C81248F553200DC4E6D /* SearchVideoViewModel.swift */; };
+		AE152C84248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C83248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift */; };
+		AE152C88248F571700DC4E6D /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C87248F571700DC4E6D /* VideoCollectionViewCell.swift */; };
+		AE152C8A248F9E1F00DC4E6D /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C89248F9E1F00DC4E6D /* WebController.swift */; };
 		AE69AF30248E782600225FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF2F248E782600225FAB /* AppDelegate.swift */; };
 		AE69AF32248E782600225FAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF31248E782600225FAB /* SceneDelegate.swift */; };
-		AE69AF34248E782600225FAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF33248E782600225FAB /* ViewController.swift */; };
 		AE69AF37248E782600225FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE69AF35248E782600225FAB /* Main.storyboard */; };
 		AE69AF39248E782700225FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE69AF38248E782700225FAB /* Assets.xcassets */; };
 		AE69AF3C248E782700225FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE69AF3A248E782700225FAB /* LaunchScreen.storyboard */; };
+		AE69AF4A248E78EB00225FAB /* SearchPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF49248E78EB00225FAB /* SearchPhotoController.swift */; };
+		AE69AF4D248E7B0600225FAB /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF4C248E7B0600225FAB /* CollectionViewDataSource.swift */; };
+		AE69AF4F248E7CEF00225FAB /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF4E248E7CEF00225FAB /* PhotoData.swift */; };
+		AE69AF51248E7DD800225FAB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF50248E7DD800225FAB /* NetworkManager.swift */; };
+		AE69AF53248E7E1D00225FAB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF52248E7E1D00225FAB /* WebService.swift */; };
+		AE69AF55248E863C00225FAB /* SearchPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF54248E863C00225FAB /* SearchPhotoViewModel.swift */; };
+		AE69AF57248E869500225FAB /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF56248E869500225FAB /* PhotoCollectionViewCell.swift */; };
+		AE69AF5A248E9B0C00225FAB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF59248E9B0C00225FAB /* MainController.swift */; };
+		AE69AF5D248E9E2C00225FAB /* SearchVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF5C248E9E2C00225FAB /* SearchVideoController.swift */; };
+		D51C6D1DDF5918BC861ECA06 /* Pods_PixabayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4297127BEF75CE01A6EBA5D9 /* Pods_PixabayApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		347AA11F8547FFD0B14B81FF /* Pods-PixabayApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayApp.debug.xcconfig"; path = "Target Support Files/Pods-PixabayApp/Pods-PixabayApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4297127BEF75CE01A6EBA5D9 /* Pods_PixabayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixabayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE152C7F248F513500DC4E6D /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
+		AE152C81248F553200DC4E6D /* SearchVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoViewModel.swift; sourceTree = "<group>"; };
+		AE152C83248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceVideo.swift; sourceTree = "<group>"; };
+		AE152C87248F571700DC4E6D /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE152C89248F9E1F00DC4E6D /* WebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		AE69AF2C248E782600225FAB /* PixabayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE69AF2F248E782600225FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE69AF31248E782600225FAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE69AF33248E782600225FAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE69AF36248E782600225FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE69AF38248E782700225FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE69AF3B248E782700225FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE69AF3D248E782700225FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE69AF49248E78EB00225FAB /* SearchPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoController.swift; sourceTree = "<group>"; };
+		AE69AF4C248E7B0600225FAB /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		AE69AF4E248E7CEF00225FAB /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
+		AE69AF50248E7DD800225FAB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AE69AF52248E7E1D00225FAB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		AE69AF54248E863C00225FAB /* SearchPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoViewModel.swift; sourceTree = "<group>"; };
+		AE69AF56248E869500225FAB /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE69AF59248E9B0C00225FAB /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		AE69AF5C248E9E2C00225FAB /* SearchVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoController.swift; sourceTree = "<group>"; };
+		D2617F37B5E503F8A78B43B9 /* Pods-PixabayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayApp.release.xcconfig"; path = "Target Support Files/Pods-PixabayApp/Pods-PixabayApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51C6D1DDF5918BC861ECA06 /* Pods_PixabayApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		855D1A93C25E159AE89C8D0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				347AA11F8547FFD0B14B81FF /* Pods-PixabayApp.debug.xcconfig */,
+				D2617F37B5E503F8A78B43B9 /* Pods-PixabayApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE69AF23248E782600225FAB = {
 			isa = PBXGroup;
 			children = (
 				AE69AF2E248E782600225FAB /* PixabayApp */,
 				AE69AF2D248E782600225FAB /* Products */,
+				855D1A93C25E159AE89C8D0A /* Pods */,
+				C0800873F052E4C61159B07D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +98,100 @@
 		AE69AF2E248E782600225FAB /* PixabayApp */ = {
 			isa = PBXGroup;
 			children = (
-				AE69AF2F248E782600225FAB /* AppDelegate.swift */,
-				AE69AF31248E782600225FAB /* SceneDelegate.swift */,
-				AE69AF33248E782600225FAB /* ViewController.swift */,
-				AE69AF35248E782600225FAB /* Main.storyboard */,
-				AE69AF38248E782700225FAB /* Assets.xcassets */,
-				AE69AF3A248E782700225FAB /* LaunchScreen.storyboard */,
+				AE69AF4B248E7AE200225FAB /* Extensions */,
+				AE69AF48248E78B500225FAB /* Service */,
+				AE69AF46248E78A600225FAB /* Model */,
+				AE69AF45248E789C00225FAB /* View */,
+				AE69AF44248E789400225FAB /* ViewModel */,
+				AE69AF43248E782E00225FAB /* Supporting files */,
 				AE69AF3D248E782700225FAB /* Info.plist */,
 			);
 			path = PixabayApp;
+			sourceTree = "<group>";
+		};
+		AE69AF43248E782E00225FAB /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF2F248E782600225FAB /* AppDelegate.swift */,
+				AE69AF31248E782600225FAB /* SceneDelegate.swift */,
+				AE69AF35248E782600225FAB /* Main.storyboard */,
+				AE69AF3A248E782700225FAB /* LaunchScreen.storyboard */,
+				AE69AF38248E782700225FAB /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		AE69AF44248E789400225FAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF54248E863C00225FAB /* SearchPhotoViewModel.swift */,
+				AE152C81248F553200DC4E6D /* SearchVideoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AE69AF45248E789C00225FAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF59248E9B0C00225FAB /* MainController.swift */,
+				AE152C89248F9E1F00DC4E6D /* WebController.swift */,
+				AE69AF5B248E9E0D00225FAB /* VideoPage */,
+				AE69AF58248E9A3000225FAB /* PhotoPage */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE69AF46248E78A600225FAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF4E248E7CEF00225FAB /* PhotoData.swift */,
+				AE152C7F248F513500DC4E6D /* VideoData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE69AF48248E78B500225FAB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF50248E7DD800225FAB /* NetworkManager.swift */,
+				AE69AF52248E7E1D00225FAB /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AE69AF4B248E7AE200225FAB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF4C248E7B0600225FAB /* CollectionViewDataSource.swift */,
+				AE152C83248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE69AF58248E9A3000225FAB /* PhotoPage */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF49248E78EB00225FAB /* SearchPhotoController.swift */,
+				AE69AF56248E869500225FAB /* PhotoCollectionViewCell.swift */,
+			);
+			path = PhotoPage;
+			sourceTree = "<group>";
+		};
+		AE69AF5B248E9E0D00225FAB /* VideoPage */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF5C248E9E2C00225FAB /* SearchVideoController.swift */,
+				AE152C87248F571700DC4E6D /* VideoCollectionViewCell.swift */,
+			);
+			path = VideoPage;
+			sourceTree = "<group>";
+		};
+		C0800873F052E4C61159B07D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4297127BEF75CE01A6EBA5D9 /* Pods_PixabayApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE69AF40248E782700225FAB /* Build configuration list for PBXNativeTarget "PixabayApp" */;
 			buildPhases = (
+				74E805649091C4C6B4DE3ED6 /* [CP] Check Pods Manifest.lock */,
 				AE69AF28248E782600225FAB /* Sources */,
 				AE69AF29248E782600225FAB /* Frameworks */,
 				AE69AF2A248E782600225FAB /* Resources */,
+				C06E9CA2CACD65962BA2B1AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +262,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74E805649091C4C6B4DE3ED6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PixabayApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C06E9CA2CACD65962BA2B1AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PixabayApp/Pods-PixabayApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PixabayApp/Pods-PixabayApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PixabayApp/Pods-PixabayApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE69AF28248E782600225FAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE69AF34248E782600225FAB /* ViewController.swift in Sources */,
+				AE152C8A248F9E1F00DC4E6D /* WebController.swift in Sources */,
+				AE69AF51248E7DD800225FAB /* NetworkManager.swift in Sources */,
+				AE69AF5D248E9E2C00225FAB /* SearchVideoController.swift in Sources */,
+				AE69AF55248E863C00225FAB /* SearchPhotoViewModel.swift in Sources */,
+				AE152C88248F571700DC4E6D /* VideoCollectionViewCell.swift in Sources */,
 				AE69AF30248E782600225FAB /* AppDelegate.swift in Sources */,
+				AE69AF53248E7E1D00225FAB /* WebService.swift in Sources */,
+				AE152C84248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift in Sources */,
+				AE69AF5A248E9B0C00225FAB /* MainController.swift in Sources */,
+				AE152C82248F553200DC4E6D /* SearchVideoViewModel.swift in Sources */,
+				AE69AF4F248E7CEF00225FAB /* PhotoData.swift in Sources */,
+				AE69AF57248E869500225FAB /* PhotoCollectionViewCell.swift in Sources */,
+				AE69AF4A248E78EB00225FAB /* SearchPhotoController.swift in Sources */,
 				AE69AF32248E782600225FAB /* SceneDelegate.swift in Sources */,
+				AE69AF4D248E7B0600225FAB /* CollectionViewDataSource.swift in Sources */,
+				AE152C80248F513500DC4E6D /* VideoData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +466,7 @@
 		};
 		AE69AF41248E782700225FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 347AA11F8547FFD0B14B81FF /* Pods-PixabayApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +485,7 @@
 		};
 		AE69AF42248E782700225FAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2617F37B5E503F8A78B43B9 /* Pods-PixabayApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
