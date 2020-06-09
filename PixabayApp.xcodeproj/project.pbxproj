@@ -77,6 +77,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AE152C8B248FBCF600DC4E6D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				AE69AF46248E78A600225FAB /* Model */,
+				AE69AF45248E789C00225FAB /* View */,
+				AE69AF44248E789400225FAB /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		AE69AF23248E782600225FAB = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +108,9 @@
 		AE69AF2E248E782600225FAB /* PixabayApp */ = {
 			isa = PBXGroup;
 			children = (
+				AE152C8B248FBCF600DC4E6D /* Module */,
 				AE69AF4B248E7AE200225FAB /* Extensions */,
 				AE69AF48248E78B500225FAB /* Service */,
-				AE69AF46248E78A600225FAB /* Model */,
-				AE69AF45248E789C00225FAB /* View */,
-				AE69AF44248E789400225FAB /* ViewModel */,
 				AE69AF43248E782E00225FAB /* Supporting files */,
 				AE69AF3D248E782700225FAB /* Info.plist */,
 			);
