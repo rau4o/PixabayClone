@@ -11,7 +11,6 @@
 		AE152C82248F553200DC4E6D /* SearchVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C81248F553200DC4E6D /* SearchVideoViewModel.swift */; };
 		AE152C84248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C83248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift */; };
 		AE152C88248F571700DC4E6D /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C87248F571700DC4E6D /* VideoCollectionViewCell.swift */; };
-		AE152C8A248F9E1F00DC4E6D /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C89248F9E1F00DC4E6D /* WebController.swift */; };
 		AE69AF30248E782600225FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF2F248E782600225FAB /* AppDelegate.swift */; };
 		AE69AF32248E782600225FAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69AF31248E782600225FAB /* SceneDelegate.swift */; };
 		AE69AF37248E782600225FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE69AF35248E782600225FAB /* Main.storyboard */; };
@@ -36,7 +35,6 @@
 		AE152C81248F553200DC4E6D /* SearchVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoViewModel.swift; sourceTree = "<group>"; };
 		AE152C83248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceVideo.swift; sourceTree = "<group>"; };
 		AE152C87248F571700DC4E6D /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
-		AE152C89248F9E1F00DC4E6D /* WebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		AE69AF2C248E782600225FAB /* PixabayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE69AF2F248E782600225FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE69AF31248E782600225FAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				AE69AF59248E9B0C00225FAB /* MainController.swift */,
-				AE152C89248F9E1F00DC4E6D /* WebController.swift */,
 				AE69AF5B248E9E0D00225FAB /* VideoPage */,
 				AE69AF58248E9A3000225FAB /* PhotoPage */,
 			);
@@ -317,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE152C8A248F9E1F00DC4E6D /* WebController.swift in Sources */,
 				AE69AF51248E7DD800225FAB /* NetworkManager.swift in Sources */,
 				AE69AF5D248E9E2C00225FAB /* SearchVideoController.swift in Sources */,
 				AE69AF55248E863C00225FAB /* SearchPhotoViewModel.swift in Sources */,

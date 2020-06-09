@@ -12,15 +12,10 @@ import AVFoundation
 
 private let cellId = "cellId"
 
-protocol TranferVideoDelegate: class {
-    func transferVideo(url: String)
-}
-
 class SearchVideoController: UIViewController {
     
     // MARK: - Properties
     
-    weak var delegate: TranferVideoDelegate?
     var viewModel = SearchVideoViewModel()
     private let searchController = UISearchController(searchResultsController: nil)
     
@@ -38,9 +33,10 @@ class SearchVideoController: UIViewController {
         return collectionView
     }()
     
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .red
         initialSetup()
     }
@@ -84,6 +80,21 @@ extension SearchVideoController {
     }
 }
 
+// MARK: - Set video with url
+
+extension SearchVideoController {
+    
+    func setVideo(url: String) {
+        let player = AVPlayer(url: URL(string: url)!)
+        let vc = AVPlayerViewController()
+        vc.player = player
+
+        present(vc, animated: true) {
+            vc.player?.play()
+        }
+    }
+}
+
 // MARK: - UISearchBarDelegate
 
 extension SearchVideoController: UISearchBarDelegate {
@@ -119,10 +130,10 @@ extension SearchVideoController: UICollectionViewDelegateFlowLayout {
 
 extension SearchVideoController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentVideo = viewModel.getElements(at: indexPath.item).small.url
-        if let currentVideo = currentVideo {
-            WebController.shared.urlString = currentVideo
-            self.navigationController?.pushViewController(WebController.shared, animated: true)
+        let currentVideo = viewModel.getElements(at: indexPath.item).videos.large.url
+        DispatchQueue.main.async {
+            guard let currentVideo = currentVideo else { return }
+            self.setVideo(url: currentVideo)
         }
     }
 }

@@ -10,6 +10,7 @@ target 'PixabayApp' do
   pod 'AnchoredBottomSheet'
   pod "Moya"
   pod "IQKeyboardManager" 
+  pod 'HCVimeoVideoExtractor'
   pod 'Kingfisher'
 
 end

@@ -41,8 +41,8 @@ final class CollectionViewDataSourceVideo<Model, Cell: UICollectionViewCell>: NS
     }
 }
 
-extension CollectionViewDataSourceVideo where Model == Videos {
-    static func make(for video: [Videos], reuseIdentifier: String) -> CollectionViewDataSourceVideo {
+extension CollectionViewDataSourceVideo where Model == VideoHit {
+    static func make(for video: [VideoHit], reuseIdentifier: String) -> CollectionViewDataSourceVideo {
         return CollectionViewDataSourceVideo(models: video, reuseIdentifier: reuseIdentifier) { (video, cell) in
             if let cell = cell as? VideoCollectionViewCell {
                 cell.configureCell(video: video)

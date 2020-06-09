@@ -38,15 +38,15 @@ class VideoCollectionViewCell: UICollectionViewCell {
     // MARK: - Helper Functions
     
     private func layoutUI() {
-        addSubview(titleLabel)
+        addSubview(photoImageView)
         
-        titleLabel.snp.makeConstraints { (make) in
+        photoImageView.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
             make.bottom.equalToSuperview().inset(30)
         }
     }
     
-    func configureCell(video: Videos) {
-        titleLabel.text = video.medium.url
+    func configureCell(video: VideoHit) {
+        photoImageView.kf.setImage(with: URL(string: "https://i.vimeocdn.com/video/\(video.picture_id)_\("640x360").jpg"))
     }
 }
