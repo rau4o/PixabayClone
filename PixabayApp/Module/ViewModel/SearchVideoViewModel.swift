@@ -7,24 +7,21 @@
 //
 
 import Foundation
-import HCVimeoVideoExtractor
 
 class SearchVideoViewModel {
     
-    var networkManager = NetworkManager()
     var videoData: [VideoHit] = []
-    
     var dataSource: CollectionViewDataSourceVideo<VideoHit,VideoCollectionViewCell>?
+    var dataFetcherServiceVideo = DataFetcherService()
     
-    func searchVideo(with query: String, completion: @escaping() -> Void) {
+    func searchVideo(query: String, completion: @escaping() -> Void) {
         DispatchQueue.global(qos: .userInitiated).async {
-            self.networkManager.fetchVideo(with: query) { [weak self] (video, error) in
+            self.dataFetcherServiceVideo.fetchVideo(query: query) { [weak self] (video) in
                 guard let self = self else {return}
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                for i in 0..<video.hits.count {
-                    self.videoData.append(video.hits[i])
+                guard let video = video else {return}   
+                let videoArr = video.hits
+                for i in 0..<videoArr.count {
+                    self.videoData.append(videoArr[i])
                 }
                 self.videoDidLoad(self.videoData)
                 DispatchQueue.main.async {
@@ -39,7 +36,7 @@ class SearchVideoViewModel {
         dataSource = .make(for: videoData, reuseIdentifier: "cellId")
     }
     
-    func videoDidLoad(_ video: [VideoHit]) {
+    private func videoDidLoad(_ video: [VideoHit]) {
         dataSource = .make(for: video, reuseIdentifier: "cellId")
     }
     

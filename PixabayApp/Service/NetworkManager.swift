@@ -8,39 +8,34 @@
 
 import Moya
 
-class NetworkManager {
+protocol NetworkManagerDelegate {
+    func fetchGenericJSONData<T: Decodable>(target: WebService, response: @escaping (T) -> Void)
+}
+
+class NetworkManager: NetworkManagerDelegate {
     
     private let provider = MoyaProvider<WebService>()
     
-    func fetchPhotos(with query: String, completion: @escaping (PhotoData, Error?) -> Void) {
-        provider.request(.searchPhoto(query: query)) { (result) in
+    func fetchGenericJSONData<T>(target: WebService, response: @escaping (T) -> Void) where T : Decodable {
+        provider.request(target) { (result) in
             switch result {
-            case .success(let response):
-                do {
-                    let photoData = try JSONDecoder().decode(PhotoData.self, from: response.data)
-                    completion(photoData,nil)
-                } catch (let error) {
-                    print(error.localizedDescription)
-                }
+            case .success(let callResponse):
+                guard let decode = self.decodeJSON(type: T.self, from: callResponse.data) else {return}
+                response(decode)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
     
-    func fetchVideo(with query: String, completion: @escaping (VideoData, Error?) -> Void) {
-        provider.request(.searchVideo(query: query)) { (result) in
-            switch result {
-            case .success(let response):
-                do {
-                    let videoData = try JSONDecoder().decode(VideoData.self, from: response.data)
-                    completion(videoData,nil)
-                } catch let error {
-                    print("\(error.localizedDescription) hz")
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+    func decodeJSON<T: Decodable>(type: T.Type, from: Data) -> T? {
+        do {
+            let decoderJson = JSONDecoder()
+            let jsonData = try decoderJson.decode(type.self, from: from)
+            return jsonData
+        } catch let error {
+            print("\(error.localizedDescription)hz")
+            return nil
         }
     }
 }

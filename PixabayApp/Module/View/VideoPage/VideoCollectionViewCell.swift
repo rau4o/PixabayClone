@@ -56,7 +56,8 @@ class VideoCollectionViewCell: UICollectionViewCell {
     func configureCell(video: VideoHit) {
         DispatchQueue.main.async {
             self.photoImageView.kf.indicatorType = .activity
-            self.photoImageView.kf.setImage(with: URL(string: "https://i.vimeocdn.com/video/\(video.picture_id)_\("640x360").jpg"))
+            guard let pictureId = video.picture_id else {return}
+            self.photoImageView.kf.setImage(with: URL(string: "https://i.vimeocdn.com/video/\(pictureId)_\("640x360").jpg"))
             self.titleLabel.text = video.tags
         }
     }

@@ -99,11 +99,12 @@ extension SearchVideoController {
 // MARK: - UISearchBarDelegate
 
 extension SearchVideoController: UISearchBarDelegate {
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.tintColor = .black
         guard let query = searchBar.text else {return}
-        viewModel.searchVideo(with: query) { [weak self] in
-            guard let self = self else { return }
+        viewModel.searchVideo(query: query) { [weak self] in
+            guard let self = self else {return}
             DispatchQueue.main.async {
                 self.collectionView.dataSource = self.viewModel.dataSource
                 self.collectionView.reloadData()
@@ -131,7 +132,10 @@ extension SearchVideoController: UICollectionViewDelegateFlowLayout {
 
 extension SearchVideoController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentVideo = viewModel.getElements(at: indexPath.item).videos.small.url
+        guard let curr = viewModel.getElements(at: indexPath.item).videos else {return}
+        let currentVideo = curr.small.url
+//        let currentVideo = viewModel.getElements(at: indexPath.item).videos?.small.url
+        print(currentVideo)
         DispatchQueue.main.async {
             guard let currentVideo = currentVideo else { return }
             self.setVideo(url: currentVideo)

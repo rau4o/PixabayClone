@@ -10,23 +10,20 @@ import Foundation
 
 class SearchPhotoViewModel {
     
-    var networkManager = NetworkManager()
     var photoData: [Hit] = []
     var dataSource: CollectionViewDataSource<Hit,PhotoCollectionViewCell>?
+    var dataFetcherService = DataFetcherService()
     
-    func searchPhoto(with query: String, completion: @escaping() -> Void) {
+    func fetchJSONPhoto(query: String, completion: @escaping() -> Void) {
         DispatchQueue.global(qos: .userInitiated).async {
-            self.networkManager.fetchPhotos(with: query) { [weak self] (photo, error) in
+            self.dataFetcherService.fetchPhoto(query: query) { [weak self] (photo) in
+                guard let photo = photo else { return }
                 guard let self = self else {return}
-                    if let error = error {
-                        print(error.localizedDescription)
-                    }
-                    let photo = photo.hits
-                    for i in 0..<photo.count {
-                        self.photoData.append(photo[i])
-                    }
-                    self.photoDidLoad(self.photoData)
-            
+                let photoArr = photo.hits
+                for i in 0..<photoArr.count {
+                    self.photoData.append(photoArr[i])
+                }
+                self.photoDidLoad(self.photoData)
                 DispatchQueue.main.async {
                     completion()
                 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE126B062490F62300605CD4 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE126B052490F62300605CD4 /* DataFetcherService.swift */; };
 		AE152C80248F513500DC4E6D /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C7F248F513500DC4E6D /* VideoData.swift */; };
 		AE152C82248F553200DC4E6D /* SearchVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C81248F553200DC4E6D /* SearchVideoViewModel.swift */; };
 		AE152C84248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE152C83248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		347AA11F8547FFD0B14B81FF /* Pods-PixabayApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayApp.debug.xcconfig"; path = "Target Support Files/Pods-PixabayApp/Pods-PixabayApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4297127BEF75CE01A6EBA5D9 /* Pods_PixabayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixabayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE126B052490F62300605CD4 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		AE152C7F248F513500DC4E6D /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
 		AE152C81248F553200DC4E6D /* SearchVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideoViewModel.swift; sourceTree = "<group>"; };
 		AE152C83248F569C00DC4E6D /* CollectionViewDataSourceVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceVideo.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				AE69AF50248E7DD800225FAB /* NetworkManager.swift */,
 				AE69AF52248E7E1D00225FAB /* WebService.swift */,
+				AE126B052490F62300605CD4 /* DataFetcherService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				AE69AF51248E7DD800225FAB /* NetworkManager.swift in Sources */,
 				AE69AF5D248E9E2C00225FAB /* SearchVideoController.swift in Sources */,
+				AE126B062490F62300605CD4 /* DataFetcherService.swift in Sources */,
 				AE69AF55248E863C00225FAB /* SearchPhotoViewModel.swift in Sources */,
 				AE152C88248F571700DC4E6D /* VideoCollectionViewCell.swift in Sources */,
 				AE69AF30248E782600225FAB /* AppDelegate.swift in Sources */,

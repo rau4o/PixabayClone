@@ -122,10 +122,11 @@ extension SearchPhotoController {
 // MARK: - UISearchBarDelegate
 
 extension SearchPhotoController: UISearchBarDelegate {
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.tintColor = .black
         guard let query = searchBar.text else {return}
-        viewModel.searchPhoto(with: query) { [weak self] in
+        viewModel.fetchJSONPhoto(query: query) { [weak self] in
             guard let self = self else {return}
             DispatchQueue.main.async {
                 self.collectionView.dataSource = self.viewModel.dataSource
@@ -156,6 +157,7 @@ extension SearchPhotoController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let currentPhoto = viewModel.getElements(at: indexPath.item).imageURL
         guard let currentImage = currentPhoto else { return }
+        print(currentImage)
         navigationController?.pushViewController(detailController, animated: true)
         detailController.mainImageView.kf.setImage(with: URL(string: currentImage))
     }

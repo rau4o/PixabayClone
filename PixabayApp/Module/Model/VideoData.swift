@@ -14,10 +14,10 @@ struct VideoData: Decodable {
 
 struct VideoHit: Decodable {
     let tags: String?
-    let videos: Videos
-    let id: Int
-    let pageURL: String
-    let picture_id: String
+    let videos: Videos?
+    let id: Int?
+    let pageURL: String?
+    let picture_id: String?
 }
 
 struct Videos: Decodable {
